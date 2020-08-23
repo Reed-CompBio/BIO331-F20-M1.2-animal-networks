@@ -7,10 +7,10 @@ You will visualize the network of a population of wild badgers from the [Weber e
 You are encouraged to collaborate with others as outlined in the [Collaboration Policy](https://www.reed.edu/biology/courses/bio331/files/collaboration-policy).  Refer to the [Moodle Python Resources](https://moodle.reed.edu/mod/page/view.php?id=141006) page or the [Bio131 Python Crashcourse](https://annaritz.github.io/python-crashcourse/) for Python syntax refreshers.
 
 * **Assignment Out:** Monday, Aug 31
-* :arrow_right: _Part 2 builds off of Lab 2_
+:arrow_right: _Part 2 builds off of Lab 2_
 * **Assignment Due:** Monday, Sept 14
 
-## 1. Read the Badger Matrix and the Badger Information
+## 1. Read the Badger Matrix
 
 The file `BadgerMatrix.txt` contains a table that represents, for every pair of badgers, the number of seconds that the badgers were in contact (we'll call it _contact time_) throughout one year.  The first few rows and columns of this file look like the following:
 
@@ -31,6 +31,8 @@ Badger	008p	009p	010p	010y	011y	012b ...
 
 Badgers that interact for `0` seconds are ignored.  This _node list/edge list_ representation is a third way to describe a graph (in addition to adjacency matrices and adjacency lists from Part 1.1).
 
+## 2. Read the Badger Information
+
 The file `BadgerInfo.txt` contains three pieces of information for every badger: (1) sex (Male or Female), (2) infection status (P for positive and N for negative); and (3) social group (an integer from 1 to 8).
 
 ```
@@ -43,7 +45,7 @@ Badger	Sex	Infection Status	Social Group
 
 :star: **Task B**:  Write a `read_info()` function that reads in `BadgerInfo.txt` and returns all three pieces of information for every badger. The type of variable you return is up to you, though dictionaries may be helpful here.  This function can either take one argument (the filename as a string) or two arguments (the filename and the `nodes` list).
 
-## 2. Post and Annotate the Graph
+## 3. Post and Annotate the Graph
 
 :star: **Task C**: Follow the instructions from Lab 2 to post this graph to [GraphSpace](http://graphspace.org/).  Remember the trick to include a timestamp in the title when you are working on drafts of graphs.
 
@@ -60,6 +62,14 @@ Add a line break <br> between the words break and between.
 3. Adjust the line width/thickness according to contact time. You will need to either scale the contact time or convert times to a log scale in order to make the graph understandable.
 4. Save a visually appealing layout that corresponds to the social group spatial configuration.  (If you compare your layout to Figure 1 from the paper, the data here is _slightly_ different).
 
+## Challenge: Visualize a Penguin Social Network
+
+**Challenges are optional, but encouraged if you finish the assignments with extra time.**  In early July, a complicated map of penguin relationships at the Kyoto Zoo was translated into English and converted into an animal social network:
+
+![penguins](figs/penguins.png)
+
+This network is stored in a [BitBucket repository](https://bitbucket.org/mhfeng/penguins_of_kyoto/src/master/) (BitBucket is another type of repository for code, much like GitHub).  Select a subset of this social network and (penguin information and relationship types) and visualize it in GraphSpace. Share your graph and submit your code in the same way you submit the badger network.
+
 ## Submitting
 
 :star2: **You're Done with Tasks A-D!**  Change your code to post your final GraphSpace graph:
@@ -70,16 +80,6 @@ Add a line break <br> between the words break and between.
 Run your code one more time to post and share your final network. You can delete any leftover graphs by clicking the `Remove` button on the GraphSpace website (this is optional).
 
 Before you submit `run.py` via Moodle, document your code.  Add comments, rearrange functions, etc., to make it readable.  You will get feedback about the amount of comments you provide.
-
-Scroll to the bottom to read about instructions for resubmitting your work if you do not finish this assignment in time.
-
-## Challenge: Visualize a Penguin Social Network
-
-In early July, a complicated map of penguin relationships at the Kyoto Zoo was translated into English and converted into an animal social network:
-
-![penguins](figs/penguins.png)
-
-This network is stored in a [BitBucket repository](https://bitbucket.org/mhfeng/penguins_of_kyoto/src/master/) (BitBucket is another type of repository for code, much like GitHub).  Select a subset of this social network and (penguin information and relationship types) and visualize it in GraphSpace. Share your graph and submit your code in the same way you submitted the badger network.
 
 ### Instructions for resubmitting
 
