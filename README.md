@@ -4,10 +4,9 @@ You will visualize the network of a population of wild badgers from the [Weber e
 
 ![badger network](https://els-jbs-prod-cdn.jbs.elsevierhealth.com/cms/attachment/a007c286-ee5a-4385-918b-4139278861f4/gr1.jpg)
 
-You are encouraged to collaborate with others as outlined in the [Collaboration Policy](https://www.reed.edu/biology/courses/bio331/files/collaboration-policy).  Refer to the [Moodle Python Resources](https://moodle.reed.edu/mod/page/view.php?id=141006) page or the [Bio131 Python Crashcourse](https://annaritz.github.io/python-crashcourse/) for Python syntax refreshers.
+Python starter code is provided in `part2.py`. You are encouraged to collaborate with others as outlined in the [Collaboration Policy](https://www.reed.edu/biology/courses/bio331/files/collaboration-policy).  Refer to the [Moodle Python Resources](https://moodle.reed.edu/mod/page/view.php?id=141006) page or the [Bio131 Python Crashcourse](https://annaritz.github.io/python-crashcourse/) for Python syntax refreshers.
 
 * **Assignment Out:** Monday, Aug 31
-:arrow_right: _Part 2 builds off of Lab 2_
 * **Assignment Due:** Monday, Sept 14
 
 ## 1. Read the Badger Matrix
@@ -31,6 +30,10 @@ Badger	008p	009p	010p	010y	011y	012b ...
 
 Badgers that interact for `0` seconds are ignored.  This _node list/edge list_ representation is a third way to describe a graph (in addition to adjacency matrices and adjacency lists from Part 1.1).
 
+:question: How can a function return two variables? See this [pythontutor example](http://pythontutor.com/visualize.html#code=%23%23%20example%20of%20a%20function%20returning%20two%20variables%0A%0Adef%20f%28%29%3A%0A%20%20%20%20a%20%3D%201%0A%20%20%20%20b%20%3D%20'hi'%0A%20%20%20%20return%20a,b%0A%20%20%20%20%0Aret_a,ret_b%20%3D%20f%28%29%0Aprint%28'Values%20returned%20are',ret_a,'and',ret_b%29%0A%0Aret%20%3D%20f%28%29%0Aprint%28'If%20only%20one%20variable%20is%20specified,%5Cna%20tuple%20is%20returned%3A',ret%29%0A%0Aprint%28'Done.'%29&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false).
+
+:question: How to read information from a file?  See the [Bio131 Python Crashcourse](https://annaritz.github.io/python-crashcourse/) and [Python Standard Library](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) descriptions.
+
 ## 2. Read the Badger Information
 
 The file `BadgerInfo.txt` contains three pieces of information for every badger: (1) sex (Male or Female), (2) infection status (P for positive and N for negative); and (3) social group (an integer from 1 to 8).
@@ -43,11 +46,15 @@ Badger	Sex	Infection Status	Social Group
 ...
 ```
 
-:star: **Task B**:  Write a `read_info()` function that reads in `BadgerInfo.txt` and returns all three pieces of information for every badger. The type of variable you return is up to you, though dictionaries may be helpful here.  This function can either take one argument (the filename as a string) or two arguments (the filename and the `nodes` list).
+:star: **Task B**:  Write a `read_info()` function that reads in `BadgerInfo.txt` and returns all three pieces of information for every badger. The type of variable you return is up to you, though [dictionaries](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict) may be helpful here.  This function takes one argument (the filename as a string).
 
 ## 3. Post and Annotate the Graph
 
-:star: **Task C**: Follow the instructions from Lab 2 to post this graph to [GraphSpace](http://graphspace.org/).  Remember the trick to include a timestamp in the title when you are working on drafts of graphs.
+_Note: we will go over preliminaries for this step in Lab 2.  From now on, decide your own functions and function names - code organization and clarity is helpful._
+
+:star: **Task C**: Follow the instructions from Lab 2 to make a GraphSpace graph object and post this graph to [GraphSpace](http://graphspace.org/).  The `post_graph()` function is provided in the starter code.  Remember the trick to include a timestamp in the title when you are working on drafts of graphs.
+
+:question: Refer to the [Python GraphSpace Cheatsheet](https://cheatography.com/annaritz/cheat-sheets/graphspace-python-client/) for graph syntax.
 
 :star: **Task D**: Annotate the nodes and edges in the graph in the following ways:
 
@@ -75,11 +82,13 @@ This network is stored in a [BitBucket repository](https://bitbucket.org/mhfeng/
 :star2: **You're Done with Tasks A-D!**  Change your code to post your final GraphSpace graph:
 1. Remove the timestamp from your graph title.
 2. Add the `Module1` tag (e.g. `G.set_tags(['Module1'])`)
-3. Share your final network with the `BIOL331F20` GraphSpace Group.  
+3. Share your final network with the `BIOL331F20` GraphSpace Group (e.g. call `post_graph()` with the additional argument `group='BIOL331F20'`).  
+
+:question: How does `post_graph()` handle optional and named arguments? See this [Dive into Python tutorial](https://linux.die.net/diveintopython/html/power_of_introspection/optional_arguments.html).
 
 Run your code one more time to post and share your final network. You can delete any leftover graphs by clicking the `Remove` button on the GraphSpace website (this is optional).
 
-Before you submit `run.py` via Moodle, document your code.  Add comments, rearrange functions, etc., to make it readable.  You will get feedback about the amount of comments you provide.
+Before you submit `part2.py` via Moodle, document your code.  Add comments, rearrange functions, etc., to make it readable.  You will get feedback about the amount of comments you provide.
 
 ### Instructions for resubmitting
 
